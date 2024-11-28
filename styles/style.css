@@ -5,9 +5,20 @@
 }
 
 .header {
+  display: grid;
   width: 375px;
   height: 668px;
   background-image: url(../images/cover-image-dark.png);
+  grid-template-columns: 10px 1fr 70px 10px;
+  grid-template-rows: 75px 98px 65px 192px 55px 117px 66px;
+  grid-template-areas:
+  ". . . ."
+  ". . menu ."
+  ". . . ."
+  ". no-focus no-focus ."
+  ". . . ."
+  ". title title ."
+  ". . . .";
 }
 
 .lamp {
@@ -16,7 +27,6 @@
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--accent-color);
   font-size: 18px;
-  font-weight: 400px;
 }
 
 .lamp::after {
@@ -26,8 +36,11 @@
 
 .header__theme-menu {
   font-family: 'IBM Plex mono', sans-serif;
-  padding: 75px 10px 0px 295px;
+  /*padding: 75px 10px 0px 295px;*/
+  grid-column: 3;
+  grid-row: 2;
   color: var(--accent-color);
+  grid-area: menu;
 }
 
 .header__theme-menu-item {
@@ -52,11 +65,14 @@
 .title-decor {
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--logo-color);
-  padding-top: 65px;
+  /*padding-top: 65px;*/
   font-size: 116px;
   font-weight: 700;
   line-height: 95.7px;
   text-shadow: 4px 4px var(--accent-color);
+  /* grid-column: 2 3;
+  grid-row: 4; */
+  grid-area: no-focus;
 }
 
 .title {
@@ -65,7 +81,7 @@
   font-weight: 700;
   background-color: var(--accent-color);
   color: var(--header-color);
-  margin: 55px 10px 66px;
+  grid-area: title;
 }
 
 .header::after {
