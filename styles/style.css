@@ -59,19 +59,20 @@
 .header__theme-menu-button_active {
   border: 1px solid var(--accent-color);
   padding: 0.5px 12px;
+  pointer-events: none;
 }
 
-.title-decor {
+.title {
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--logo-color);
-  font-size: 116px;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-weight: 700;
   line-height: 95.7px;
   text-shadow: 4px 4px var(--accent-color);
   grid-area: no-focus;
 }
 
-.title {
+.title-decor {
   font-family: 'IBM Plex mono', sans-serif;
   font-size: 18px;
   font-weight: 700;
