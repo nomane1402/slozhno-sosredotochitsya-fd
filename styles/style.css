@@ -3,21 +3,47 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-width: 375px;
+  background-image: url(../images/cover-image-dark.png);
+  background-attachment: fixed;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 10px 1fr 70px 10px;
-  grid-template-rows: 75px 98px 65px 192px 55px 117px 66px;
+  grid-template-columns: 10px 25.04px 1fr 44.96px 25.04px 10px;
+  grid-template-rows: 10px 25px 40px 98px 65px 192px 55px 117px 31px 25px 10px;
   grid-template-areas:
-  ". . . ."
-  ". . menu ."
-  ". . . ."
-  ". no-focus no-focus ."
-  ". . . ."
-  ". title title ."
-  ". . . .";
+  ". . . . . ."
+  ". . . . corner-top ."
+  ". . . . . ."
+  ". . . menu menu ."
+  ". . . . . ."
+  ". no-focus no-focus no-focus no-focus ."
+  ". . . . . ."
+  ". title title title title ."
+  ". . . . . ."
+  ". corner-bot . . . ."
+  ". . . . . .";
 }
+
+/* Реализация углов */
+
+.header::after {
+  content: "";
+  /* position: absolute; */
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  grid-area: corner-top;
+}
+
+.header::before {
+  content: "";
+  /* position: absolute; */
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  grid-area: corner-bot;
+}
+
+/* Конец реализации углов */
 
 .lamp {
   position: absolute;
@@ -79,4 +105,24 @@
   background-color: var(--accent-color);
   color: var(--header-color);
   grid-area: title;
+}
+
+.question {
+  font-family: 'IBM Plex mono', sans-serif;
+font-size: 18px;
+font-weight: 700;
+line-height: 23.4px;
+color: var(--accent-color);
+}
+
+.title-decor-thin {
+font-weight: 400;
+}
+
+.main-text {
+  font-family: 'IBM Plex mono', sans-serif;
+font-size: 18px;
+font-weight: 400;
+line-height: 23.4px;
+color: var(--text-color);
 }
