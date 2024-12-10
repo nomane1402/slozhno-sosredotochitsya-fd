@@ -8,7 +8,8 @@
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
   --text-color: rgba(53, 52, 48, 1);
-  --header-color: rgba(53, 52, 48, 1);;
+  --header-color: rgba(53, 52, 48, 1);
+  --corner-color: rgba(53, 52, 48, 1);
 }
 
 /* Остальные стили */
@@ -18,10 +19,20 @@
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
   --text-color: rgba(53, 52, 48, 1);
-  --header-color: rgba(53, 52, 48, 1);;  
+  --header-color: rgba(53, 52, 48, 1);
+  --corner-color: rgba(53, 52, 48, 1);  
   }
 }
 
+/* .header::after {
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
+}
+
+.header::before {
+  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
+} */
 /* Остальные стили */ 
 
 .page.theme_light {
@@ -34,5 +45,6 @@
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
   --text-color: rgba(53, 52, 48, 1);
-  --header-color: rgba(53, 52, 48, 1);;  
+  --header-color: rgba(53, 52, 48, 1);
+  --corner-color: rgba(53, 52, 48, 1);  
 }

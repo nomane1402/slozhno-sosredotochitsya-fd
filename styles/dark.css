@@ -9,8 +9,18 @@
   --logo-color: rgba(219, 0, 255, 1);
   --text-color: rgba(241, 178, 206, 1);
   --header-color: rgba(0, 0, 40, 1);
+  --corner-color: rgba(255, 0, 112, 1);
 }
 
+.header::after {
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+}
+
+.header::before {
+  border-bottom: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+}
 /* Остальные стили */ 
 
 .page.theme_dark {
