@@ -23,17 +23,7 @@
   --corner-color: rgba(53, 52, 48, 1);  
   }
 }
-
-/* .header::after {
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
-}
-
-.header::before {
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
-} */
-/* Остальные стили */ 
+/* Остальные стили */   
 
 .page.theme_light {
   /* сохраните этот селектор в приведённом виде.
@@ -47,4 +37,8 @@
   --text-color: rgba(53, 52, 48, 1);
   --header-color: rgba(53, 52, 48, 1);
   --corner-color: rgba(53, 52, 48, 1);  
+}
+
+.page.theme_light.lamp {
+    display: none;
 }
