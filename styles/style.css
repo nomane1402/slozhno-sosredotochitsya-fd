@@ -81,10 +81,13 @@
 
 .header__theme-menu-button:hover {
   cursor: pointer;
+  border: 1px solid var(--transparent-corner-color);
+  padding: 0.5px 12px;
 }
 
 .header__theme-menu-button:focus {
-  
+  outline: none;
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
@@ -114,10 +117,10 @@
 
 .question {
   font-family: 'IBM Plex mono', sans-serif;
-font-size: 18px;
-font-weight: 700;
-line-height: 23.4px;
-color: var(--corner-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: var(--corner-color);
 }
 
 .title-decor-thin {
@@ -134,19 +137,22 @@ color: var(--text-color);
 
 .link {
   text-shadow: 2px 1px var(--accent-color);
+  text-decoration: none;
 }
 
 .link:hover {
-  /* text-decoration: underline var(--text-color); */
-  /* border-bottom: 2px solid var(--text-color); */
-  text-decoration-line: underline;
-text-decoration-style: solid;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
+  /* text-decoration: underline solid var(--text-color); */
+  line-height: 10px;
+  border-block-end: 2px solid var(--text-color);
+  /* text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none; */
+  cursor: pointer;
 }
 
 .link:focus {
-
+  outline: 1px solid var(--text-color);
 }
 
 .main {
