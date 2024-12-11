@@ -4,6 +4,8 @@
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-width: 375px;
   background-image: url(../images/cover-image-dark.png);
+  background-position: center;
+  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -44,6 +46,7 @@
 /* Конец реализации углов */
 
 .lamp {
+  visibility: var(--visiability);
   position: absolute;
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--accent-color);
@@ -78,6 +81,10 @@
 
 .header__theme-menu-button:hover {
   cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  
 }
 
 .header__theme-menu-button_active {
@@ -127,4 +134,35 @@ color: var(--text-color);
 
 .link {
   text-shadow: 2px 1px var(--accent-color);
+}
+
+.link:hover {
+  /* text-decoration: underline var(--text-color); */
+  /* border-bottom: 2px solid var(--text-color); */
+  text-decoration-line: underline;
+text-decoration-style: solid;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+
+.link:focus {
+
+}
+
+.main {
+  margin: 40px 10px;
+}
+
+.section {
+  margin-bottom: 50px;
+}
+
+.question {
+  margin-bottom: 20px;
+}
+
+h3.title-decor,
+h4.title-decor {
+  margin-top: 20px;
+  margin-bottom: 10px;
 }

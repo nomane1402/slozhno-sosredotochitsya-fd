@@ -12,15 +12,6 @@
   --corner-color: rgba(255, 0, 112, 1);
 }
 
-.header::after {
-  border-top: 1px solid var(--corner-color);
-  border-right: 1px solid var(--corner-color);
-}
-
-.header::before {
-  border-bottom: 1px solid var(--corner-color);
-  border-left: 1px solid var(--corner-color);
-}
 /* Остальные стили */ 
 
 .page.theme_dark {
