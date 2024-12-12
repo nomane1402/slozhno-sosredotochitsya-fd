@@ -51,8 +51,10 @@
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--accent-color);
   font-size: 18px;
-  left: 304px;
-  top: 10px;
+  padding-right: 38px;
+  padding-top: 10px;
+  /* left: 304px;
+  top: 10px; */
 }
 
 .lamp::after {
@@ -159,12 +161,16 @@ color: var(--text-color);
   margin: 40px 10px;
 }
 
-.section {
-  margin-bottom: 50px;
+.section:not(:last-child) {
+  margin-block-end: 50px;
 }
 
 .question {
   margin-bottom: 20px;
+}
+
+.image {
+  margin-block-end: 6px;
 }
 
 h3.title-decor,
@@ -172,3 +178,56 @@ h4.title-decor {
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
+.footer {
+  min-width: 375px;
+  min-height: 668px;
+  text-align: center;
+  line-height: 96px;
+  /* align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center */
+  display: grid;
+  
+  display: grid;
+  grid-template-columns: 10px 355px 10px;
+  grid-template-rows: 10px 647px 10px;
+  grid-template-areas: 
+  ". . ."
+  ". title ."
+  ". . .";
+}
+
+h2.title {
+  grid-area: title;
+  align-self: center;
+  line-height: 96px;
+  margin-block-end: 17px;
+}
+
+/* Реализация углов */
+
+.footer::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--corner-color);
+  border-right: 1px solid var(--corner-color);
+  margin: 0 0 632px 340px;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--corner-color);
+  border-left: 1px solid var(--corner-color);
+  margin: 632px 340px 10px 10px;
+}
+
+/* Конец реализации углов */
