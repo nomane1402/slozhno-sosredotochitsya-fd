@@ -3,16 +3,18 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   min-width: 375px;
+  max-width: 1024px;
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
+  margin: auto;
 }
 
 .header {
   display: grid;
-  grid-template-columns: 10px 25.04px 1fr 44.96px 25.04px 10px;
-  grid-template-rows: 10px 25px 40px 98px 65px 192px 55px 117px 31px 25px 10px;
+  grid-template-columns: clamp(10px, 20px, 20px) clamp(25.04px, 25px, 25px) 1fr 44.96px clamp(25.04px, 25px, 25px) clamp(10px, 20px, 20px);
+  grid-template-rows: clamp(10px, 20px, 20px) 25px clamp(40px, 147px, ) 98px 65px 192px 55px 117px 31px 25px clamp(10px, 20px, 20px);
   grid-template-areas:
   ". . . . . ."
   ". . . . corner-top ."
@@ -51,10 +53,10 @@
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--accent-color);
   font-size: 18px;
-  padding-right: 38px;
-  padding-top: 10px;
-  /* left: 304px;
-  top: 10px; */
+  /* padding-right: 38px;
+  padding-top: 10px; */
+  left: 304px;
+  top: 10px;
 }
 
 .lamp::after {
@@ -131,10 +133,10 @@ font-weight: 400;
 
 .main-text {
   font-family: 'IBM Plex mono', sans-serif;
-font-size: 18px;
-font-weight: 400;
-line-height: 23.4px;
-color: var(--text-color);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: var(--text-color);
 }
 
 .link {
@@ -169,12 +171,59 @@ color: var(--text-color);
   margin-bottom: 20px;
 }
 
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: minmax(10px, 20px);
+  grid-template-areas: 
+  "sunset sunset ice-cream"
+  "tape books ice-cream"
+  "tape street street";
+  grid-auto-flow: column;
+}
+
+.sunset {
+  /* grid-column: span 2; */
+  grid-area: sunset;
+  width: clamp(355px, 479px, 649px);
+  height: clamp(142px, 192px, 260px);
+}
+
+.ice-cream {
+  /* grid-column: 1;
+  grid-row: span 2; */
+  grid-area: ice-cream;
+  width: clamp(355px, 229px, 315px);
+  height: clamp(355px, 441px, 595px);
+}
+
+.tape {
+  /* grid-column: ; */
+  grid-area: tape;
+  width: clamp(355px, 229px, 315px);
+  height: clamp(237px, 568px, 768px);
+}
+
+.books {
+  /* grid-column: ; */
+  grid-area: books;
+  width: clamp(355px, 230px, 315px);
+  height: clamp(355px, 230px, 315px);
+}
+
+.street {
+  grid-area: street;
+  width: clamp(355px, 479px, 649px);
+  height: clamp(237px, 318px, 428px);
+}
+
 .image {
   margin-block-end: 6px;
 }
 
-h3.title-decor,
-h4.title-decor {
+h4.title-decor,
+h5.title-decor {
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -188,8 +237,6 @@ h4.title-decor {
   display: flex;
   justify-content: center;
   align-items: center */
-  display: grid;
-  
   display: grid;
   grid-template-columns: 10px 355px 10px;
   grid-template-rows: 10px 647px 10px;
