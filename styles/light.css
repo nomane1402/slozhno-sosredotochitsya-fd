@@ -24,7 +24,7 @@
   --header-color: rgba(53, 52, 48, 1);
   --corner-color: rgba(53, 52, 48, 1);
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
-  --visiability: visible;  
+  --visiability: visible;
   }
 }
 /* Остальные стили */   
@@ -40,8 +40,8 @@
   --logo-color: rgba(255, 194, 230, 1);
   --text-color: rgba(53, 52, 48, 1);
   --header-color: rgba(53, 52, 48, 1);
-  --corner-color: rgba(53, 52, 48, 1); 
+  --corner-color: rgba(53, 52, 48, 1);
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
-  --visiability: hidden; 
+  --visiability: hidden;
 }
 
