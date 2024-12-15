@@ -5,13 +5,7 @@
 */
 
 :root.theme-dark {
-  --accent-color: rgba(255, 0, 112, 1);
-  --logo-color: rgba(219, 0, 255, 1);
-  --text-color: rgba(241, 178, 206, 1);
-  --header-color: rgba(0, 0, 40, 1);
-  --corner-color: rgba(255, 0, 112, 1);
-  --transparent-corner-color: rgba(255, 0, 112, 0.4);
-  --visiability: visible;
+  
 }
 
 /* Остальные стили */ 
