@@ -11,27 +11,29 @@
   margin: auto;
 }
 
-.header {
-  display: grid;
-}
-
 /* Реализация углов */
 
-.header::after {
+.page::after, .page::before {
   content: "";
+}
+
+.page::after {
   border-top: 1px solid var(--corner-color);
   border-right: 1px solid var(--corner-color);
   grid-area: corner-top;
 }
 
-.header::before {
-  content: "";
+.page::before {
   border-bottom: 1px solid var(--corner-color);
   border-left: 1px solid var(--corner-color);
   grid-area: corner-bot;
 }
 
 /* Конец реализации углов */
+
+.header {
+  display: grid;
+}
 
 .lamp {
   visibility: var(--visiability);
@@ -60,6 +62,12 @@
   text-align: center;
 }
 
+.header__theme-menu-button_active {
+  outline: 1px solid var(--corner-color);
+  padding: 0.5px 12px;
+  pointer-events: none;
+}
+
 .header__theme-menu-item:not(:last-child) {
   padding-bottom: 10px;
 }
@@ -73,20 +81,18 @@
 
 .header__theme-menu-button:hover {
   cursor: pointer;
-  border: 1px solid var(--transparent-corner-color);
+  outline: 1px solid var(--transparent-corner-color);
   padding: 0.5px 12px;
 }
 
 .header__theme-menu-button:focus {
   outline: none;
-  border-bottom: 1px solid var(--corner-color);
-  padding: 0.5px 12px;
+  border-bottom: none;
 }
 
-.header__theme-menu-button_active {
-  border: 1px solid var(--corner-color);
-  padding: 0.5px 12px;
-  pointer-events: none;
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--corner-color);
+  padding: 0.5px 12px 1.5px; 
 }
 
 .title {
@@ -118,12 +124,17 @@
   font-weight: 400;
 }
 
-.main-text {
+.block__text {
   font-family: "IBM Plex mono", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   color: var(--text-color);
+}
+
+/* На случай добавления второго абзадца в блок */
+.block__text:not(:last-child) { 
+  margin-block-end: 20px;
 }
 
 .link {
@@ -138,14 +149,20 @@
 }
 
 .link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
   outline: 1px solid var(--text-color);
 }
 
 .pictures {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr); */
 }
+
+/* Конец основных стилей проекта */
+
+/* Начало стилей для минимальной ширины экрана 375px */
 
 @media (min-width: 375px) {
   .header {
@@ -271,6 +288,10 @@
 
   /* Конец реализации углов */
 }
+
+/* Конец стилей для минимальной ширины экрана 375px */
+
+/* Начало стилей для минимальной ширины экрана 768px */
 
 @media (min-width: 768px) {
   .header {
@@ -445,6 +466,10 @@
   }
 }
 
+/* Конец стилей для минимальной ширины экрана 768px */
+
+/* Начало стилей для минимальной ширины экрана 1024px */
+
 @media (min-width: 1024px) and (orientation: landscape) {
   .header {
     grid-template-columns: 20px 25px 352px 116px 114px 352px 25px 20px;
@@ -475,13 +500,13 @@
     padding-bottom: 0;
   }
 
-  .header__theme-menu-button:hover {
+  /* .header__theme-menu-button:hover {
     padding: 0.5px 12px;
   }
 
   .header__theme-menu-button_active {
     padding: 0.5px 12px 6px;
-  }
+  } */
 
   .lamp {
     top: 18px;
@@ -500,7 +525,6 @@
   .section.why {
     grid-template-columns: max(314.96px) 1fr;
     grid-template-rows: 244px 244px;
-    height: auto;
   }
 
   .section.what {
@@ -574,3 +598,5 @@
     margin-top: 728px;
   }
 }
+
+/* Конец стилей для минимальной ширины экрана 1024px */
