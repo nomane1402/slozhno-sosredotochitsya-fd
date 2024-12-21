@@ -3,7 +3,7 @@
   Здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
-
+/* 
 :root.theme-light {
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
@@ -11,12 +11,13 @@
   --header-color: rgba(53, 52, 48, 1);
   --corner-color: rgba(53, 52, 48, 1);
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
+  --background-color: rgba(255, 241, 247, 1);
   --visiability: visible;
-}
+} */
 
 /* Остальные стили */
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
 :root {
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
@@ -26,7 +27,7 @@
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
   --visiability: visible;
   }
-}
+} */
 /* Остальные стили */   
 
 .page.theme_light {
@@ -42,6 +43,7 @@
   --header-color: rgba(53, 52, 48, 1);
   --corner-color: rgba(53, 52, 48, 1);
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
+  --background-color: rgba(255, 241, 247, 1);
   --visiability: hidden;
 }
 

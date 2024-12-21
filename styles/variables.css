@@ -10,5 +10,6 @@
   --header-color: rgba(0, 0, 40, 1);
   --corner-color: rgba(255, 0, 112, 1);
   --transparent-corner-color: rgba(255, 0, 112, 0.4);
+  --background-color: rgba(0, 0, 40, 1);
   --visiability: visible;
 }
