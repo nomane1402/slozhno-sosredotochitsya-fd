@@ -17,7 +17,7 @@
 
 /* Остальные стили */
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
 :root {
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
@@ -26,8 +26,9 @@
   --corner-color: rgba(53, 52, 48, 1);
   --transparent-corner-color: rgba(53, 52, 48, 0.4);
   --visiability: visible;
+  --background-image: url(../images/cover-image-light.png);
   }
-} */
+}
 /* Остальные стили */   
 
 .page.theme_light {
@@ -35,7 +36,7 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-  background-image: url(../images/cover-image-light.png);
+  --background-image: url(../images/cover-image-light.png);
   background-attachment: fixed;
   --accent-color: rgba(255, 141, 203, 1);
   --logo-color: rgba(255, 194, 230, 1);
