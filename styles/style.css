@@ -43,8 +43,8 @@
   color: var(--accent-color);
   font-size: 18px;
   line-height: 25px;
-  top: 10px;
-  right: calc(50vmax - 483px);
+  /* top: 10px;
+  right: calc(50vmax - 483px); */
 }
 
 .lamp::after {
@@ -52,6 +52,7 @@
   font-size: 23px;
   text-shadow: 0px 0px 5px var(--accent-color);
   filter: drop-shadow(0px 0px 5px var(--accent-color));
+  margin-left: -2px;
 }
 
 .header__theme-menu {
@@ -123,10 +124,8 @@
   color: var(--corner-color);
 }
 
-.advice .title-decor {
+.title-thin {
   font-weight: 400;
-  margin-block-start: 20px;
-  margin-block-end: 10px;
 }
 
 .section:not(:first-child) {
@@ -210,7 +209,7 @@
 
   .lamp {
     top: 9px;
-    right: 14px;
+    right: 16px;
   }
 
   .title {
@@ -302,7 +301,7 @@
 
 @media (min-width: 768px) {
   .header {
-    grid-template-columns: 20px 25px min(339px) min(294px) min(45px) 25px 20px;
+    grid-template-columns: 20px 25px 1fr min(294px) min(45px) 25px 20px;
     grid-template-rows: 20px 25px min(147px) min(98px) min(173px) min(99px) min(162px) min(117px) min(138px) 25px 20px;
     grid-template-areas:
       ". . . . . . ."
@@ -319,7 +318,7 @@
   }
 
   .lamp {
-    right: 24px;
+    right: 26px;
     top: 18px;
   }
 
@@ -489,16 +488,16 @@
 
   .lamp {
     top: 18px;
-    right: calc(50vmax - 488px);
+    right: calc(50vmax - 485px);
+  }
+
+  .lamp::after {
+    margin-left: -3px;
   }
 
   .title {
     line-height: 129.53px;
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
-  .main {
-    margin: 60px 20px;
   }
 
   .section.why {
@@ -512,29 +511,15 @@
     margin-block-end: 60px;
   }
 
-  .section.what .question {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-
   .section.what .blocks {
     display: grid;
-    grid-auto-flow: row;
     gap: 20px;
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
-    grid-template-columns: repeat(3, 315px) ;
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(3, 315px);
   }
 
   .section.how {
     grid-template-columns: min(315px) 1fr;
     grid-template-rows: min(98px) 1fr;
-  }
-
-  .section.how .question {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
   }
 
   .block.pictures {
